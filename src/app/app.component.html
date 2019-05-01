@@ -5,7 +5,12 @@
         <mat-card-title class="card-title">To-dos</mat-card-title>
       </mat-card-header>
       <mat-card-content class="card-content">
-        <div class="list">
+        <div class="list"
+             cdkDropList
+             #todoList="cdkDropList"
+             [cdkDropListData]="todos"
+             [cdkDropListConnectedTo]="completedList"
+             (cdkDropListDropped)="drop($event)">
           <div class="todo-item" *ngFor="let todo of todos" cdkDrag>{{ todo }}</div>
         </div>
       </mat-card-content>
@@ -15,7 +20,12 @@
         <mat-card-title class="card-title">Completed</mat-card-title>
       </mat-card-header>
       <mat-card-content class="card-content">
-        <div class="list">
+        <div class="list"
+             cdkDropList
+              #completedList="cdkDropList"
+              [cdkDropListData]="completed"
+              [cdkDropListConnectedTo]="todoList"
+              (cdkDropListDropped)="drop($event)">
           <div class="todo-item" *ngFor="let todo of completed" cdkDrag>{{ todo }}</div>
         </div>
       </mat-card-content>
