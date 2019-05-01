@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-examples';
+  todos: string[] = [
+    'Get eggs from grocery store',
+    'Change the oil & filter in car',
+    'Do the dishes',
+    'Pay the utility bill'
+  ];
+
+  completed: string[] = [
+    'Wash the car',
+    'Response to InMail'
+  ]
 }
