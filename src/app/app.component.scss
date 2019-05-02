@@ -1,6 +1,4 @@
-$primary-color: #3F51B5;
-$secondary-color: #C5CAE9;
-$text-color: #E8EAF6;
+@import "variables";
 
 #pagewrapper {
   height: 100%;
@@ -19,7 +17,7 @@ $text-color: #E8EAF6;
 
       .card-header {
         background-color: $primary-color;
-        color: $text-color;
+        color: $secondary-color-light;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -44,8 +42,7 @@ $text-color: #E8EAF6;
 
           .todo-item {
             background-color: $secondary-color;
-            border-bottom: 1px solid $text-color;
-            font-size: 1rem;
+            border-bottom: 1px solid $secondary-color-light;
             padding: .2rem;
           }
         }
