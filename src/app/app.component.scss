@@ -1,5 +1,3 @@
-@import "variables";
-
 #pagewrapper {
   height: 100%;
 
@@ -16,8 +14,6 @@
       flex: 1 1 50%;
 
       .card-header {
-        background-color: $primary-color;
-        color: $secondary-color-light;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -41,8 +37,6 @@
           flex: 1 1 100%;
 
           .todo-item {
-            background-color: $secondary-color;
-            border-bottom: 1px solid $secondary-color-light;
             padding: .2rem;
           }
         }

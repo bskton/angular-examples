@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+
+@mixin app-component-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+
+  $card-header-hue: 500;
+  $todo-item-hue: 100;
+
+  .todos-section-wrapper {
+    .card-header {
+      background-color: mat-color($primary, $card-header-hue);
+      color: mat-contrast($primary, $card-header-hue);
+    }
+
+    .todo-item {
+      background-color: mat-color($primary, $todo-item-hue);
+      color: mat-contrast($primary, $todo-item-hue);
+      border-bottom: 1px solid mat-color($primary, 50);
+    }
+  }
+}
